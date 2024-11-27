@@ -1,3 +1,8 @@
+/**
+ * This program demonstrates a Node class representing a binary tree node.
+ * Each Node has a unique ID, integer data, and two child nodes (left and right).
+ * The program includes a main method for testing the functionality of the Node class.
+ */
 public class nodes {
     static class Node {
         private String nodeId; // Unique identifier for the node
