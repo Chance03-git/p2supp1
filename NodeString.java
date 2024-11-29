@@ -1,43 +1,42 @@
-import org.w3c.dom.Node;
 
-static class Node {
-    private String nodeId; // Unique identifier for the node
-    private int data;      // Integer data stored in the node
-    private Node left;     // Left child node
-    private Node right;    // Right child node
-
-    // Constructor
-    public Node(String nodeId, int data) {
-        this.nodeId = nodeId;
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-     /**
-         * Dumps the node and its children to a string.
-         * - The root node is printed normally.
-         * - Each level deeper in the tree starts with an additional tab character.
-         *
-         * @param depth The depth of the current node, used to determine tab indentation.
-         * @return A formatted string representing the node and its children.
-         */
-    public String dumpToString(int depth) {
-        StringBuilder sb = new StringBuilder();
-        // Add tabs based on the depth
-        sb.append("\t".repeat(depth));
-        // Add node ID and data
-        sb.append("Node{ID='").append(nodeId).append("', Data=").append(data).append("}\n");
-        // Dump the left and right children
-        if (left != null) {
-            sb.append(left.dumpToString(depth + 1));
-        }
-        if (right != null) {
-            sb.append(right.dumpToString(depth + 1));
-        }
-        return sb.toString();
-    }
-}
 public class NodeString{
+    static class Node {
+        private String nodeId; // Unique identifier for the node
+        private int data;      // Integer data stored in the node
+        private Node left;     // Left child node
+        private Node right;    // Right child node
+    
+        // Constructor
+        public Node(String nodeId, int data) {
+            this.nodeId = nodeId;
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+         /**
+             * Dumps the node and its children to a string.
+             * - The root node is printed normally.
+             * - Each level deeper in the tree starts with an additional tab character.
+             *
+             * @param depth The depth of the current node, used to determine tab indentation.
+             * @return A formatted string representing the node and its children.
+             */
+        public String dumpToString(int depth) {
+            StringBuilder sb = new StringBuilder();
+            // Add tabs based on the depth
+            sb.append("\t".repeat(depth));
+            // Add node ID and data
+            sb.append("Node{ID='").append(nodeId).append("', Data=").append(data).append("}\n");
+            // Dump the left and right children
+            if (left != null) {
+                sb.append(left.dumpToString(depth + 1));
+            }
+            if (right != null) {
+                sb.append(right.dumpToString(depth + 1));
+            }
+            return sb.toString();
+        }
+    }
     public static void main(String[] args) {
         // Create the root node
         Node root = new Node("root", 10);
