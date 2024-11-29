@@ -13,6 +13,14 @@ static class Node {
         this.left = null;
         this.right = null;
     }
+     /**
+         * Dumps the node and its children to a string.
+         * - The root node is printed normally.
+         * - Each level deeper in the tree starts with an additional tab character.
+         *
+         * @param depth The depth of the current node, used to determine tab indentation.
+         * @return A formatted string representing the node and its children.
+         */
     public String dumpToString(int depth) {
         StringBuilder sb = new StringBuilder();
         // Add tabs based on the depth
