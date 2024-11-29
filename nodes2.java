@@ -12,6 +12,13 @@ public class nodes2 {
             this.left = null;
             this.right = null;
         }
+        /**
+         * Inserts a value into the node's children based on the specified rules:
+         * - If the new value is less than the current node's data, it goes to the left child.
+         * - If the new value is greater than or equal to the current node's data, it goes to the right child.
+         * - If the child node is null, a new node is created.
+         * - newData The value to be inserted into the tree
+         */
         public void insert(int newData) {
             if (newData < this.data) {
                 // Insert into the left child
