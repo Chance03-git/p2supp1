@@ -1,4 +1,4 @@
-import org.w3c.dom.Node;
+
 
 public class nodes2 {
     static class Node {
